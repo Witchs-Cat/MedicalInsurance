@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Views\Shared\Ui.fs" />
+    <Compile Include="Views\Shared\Head.fs" />
+    <Compile Include="Views\Shared\Layout.fs" />
+    <Compile Include="Views\Shared\PersonInfoForm.fs" />
+    <Compile Include="Views\UpdatePersonView.fs" />
+    <Compile Include="Views\CreatePersonView.fs" />
+    <Compile Include="Views\InsuredsView.fs" />
+    <Compile Include="Controllers\InsuredsController.fs" />
+    <Compile Include="Routes\InsuredsRoute.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Giraffe" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MedicalInsurance.DataAccessLayer\MedicalInsurance.DataAccessLayer.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
